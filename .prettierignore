@@ -18,3 +18,5 @@ coverage/
 # Reference material, not part of the site
 resources-temp/
 alto-hugo-template-main/
+# Written by CloudCannon's editors, whose output is the canonical format
+src/content/

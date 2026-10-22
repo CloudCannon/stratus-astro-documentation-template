@@ -15,7 +15,7 @@ import { codeFencePlugin } from "./src/utils/codeFencePlugin.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  site: "https://example.com", // TODO: Update to your production URL
+  site: "https://glamorous-boar.cloudvent.net",
   fonts: siteFonts,
   build: {
     inlineStylesheets: "always",
