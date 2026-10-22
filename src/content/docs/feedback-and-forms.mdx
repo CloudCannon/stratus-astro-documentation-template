@@ -10,7 +10,6 @@ showFeedback: true
 showCopyPage: true
 showPager: true
 ---
-
 ## The helpful vote
 
 Every documentation page ends with "Was this page helpful?". It is a real `<form method="post">`, so it works with JavaScript disabled — a script upgrades it to submit in the background and swap in the thank-you message without a page load. The reader never leaves the page, so the vote has no success page.
@@ -21,8 +20,8 @@ Turn it off per page with `showFeedback: false` in frontmatter, or site-wide in 
 
 The vote's settings live under `feedback` in `src/data/pageTools.json`. What you set there depends on where the votes go:
 
-- **CloudCannon Forms** (the default, and only if CloudCannon hosts the site): keep `inboxKey` as `stratus-form`, the Inbox every form on this site uses. Set `action` to any page on this site, or leave it empty to post to the page the reader voted on. With JavaScript on, the reader stays on the page either way. With it off, CloudCannon sends them to the `action` page, so empty brings them back to where they voted. First create the Inbox and link it to the site — see [Setting up CloudCannon Forms](#setting-up-cloudcannon-forms) below. Until you do, votes have nowhere to go.
-- **Any other endpoint:** set `action` to the endpoint's URL, and delete `inboxKey` so the field isn't sent.
+* **CloudCannon Forms** (the default, and only if CloudCannon hosts the site): keep `inboxKey` as `stratus-form`, the Inbox every form on this site uses. Set `action` to any page on this site, or leave it empty to post to the page the reader voted on. With JavaScript on, the reader stays on the page either way. With it off, CloudCannon sends them to the `action` page, so empty brings them back to where they voted. First create the Inbox and link it to the site — see [Setting up CloudCannon Forms](#setting-up-cloudcannon-forms) below. Until you do, votes have nowhere to go.
+* **Any other endpoint:** set `action` to the endpoint's URL, and delete `inboxKey` so the field isn't sent.
 
 <CodeTabs showCopy={true}>
 <CodeTab label="CloudCannon" language="json">
@@ -110,16 +109,16 @@ Forms are built from the same blocks as the rest of the site, and can be dropped
 
 There are two ways to set that up:
 
-- **Use CloudCannon Forms.** This works only if CloudCannon hosts your site. First, follow [Setting up CloudCannon Forms](#setting-up-cloudcannon-forms) to create an Inbox and link it to your site. CloudCannon's [Forms documentation](https://cloudcannon.com/documentation/host/forms/) has the full reference. Then, in the form itself:
-  - Set `action` to the page on this site to send the visitor to after they submit. The form below uses a thank-you page, [`/form-success/`](/form-success/). You can also send them back to the form's own page with `?success` on the end, as described below.
-  - Give every field a `name`.
-  - Leave `method` set to `POST`.
-  - Set `honeypotName` to `_gotcha`.
-  - Add a Hidden field with `name` set to `inbox_key` and `value` set to `stratus-form`.
-- **Use another form service.** Formspree, Basin, Netlify Forms and your own API all work, and so does any host. You can paste the service's own embed code into an `Embed` block, as described in [Media & components](/media-and-components/), or keep using this form:
-  - Set `action` to the endpoint URL the service gives you.
-  - Give every field the `name` the service expects.
-  - Set `honeypotName` to the service's spam field, if it has one.
+* **Use CloudCannon Forms.** This works only if CloudCannon hosts your site. First, follow [Setting up CloudCannon Forms](#setting-up-cloudcannon-forms) to create an Inbox and link it to your site. CloudCannon's [Forms documentation](https://cloudcannon.com/documentation/host/forms/) has the full reference. Then, in the form itself:
+  * Set `action` to the page on this site to send the visitor to after they submit. The form below uses a thank-you page, [`/form-success/`](/form-success/). You can also send them back to the form's own page with `?success` on the end, as described below.
+  * Give every field a `name`.
+  * Leave `method` set to `POST`.
+  * Set `honeypotName` to `_gotcha`.
+  * Add a Hidden field with `name` set to `inbox_key` and `value` set to `stratus-form`.
+* **Use another form service.** Formspree, Basin, Netlify Forms and your own API all work, and so does any host. You can paste the service's own embed code into an `Embed` block, as described in [Media & components](/media-and-components/), or keep using this form:
+  * Set `action` to the endpoint URL the service gives you.
+  * Give every field the `name` the service expects.
+  * Set `honeypotName` to the service's spam field, if it has one.
 
 With either option, you can set `successMessage` to show a confirmation after someone submits the form. The message appears only when the visitor comes back to the form's page with `?success` on the end of the URL. With CloudCannon Forms, set `action` to that address. With another service, set the service's redirect to it.
 
