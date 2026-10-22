@@ -1,0 +1,39 @@
+action:
+  type: url
+  comment: Where to send the form-data when the form is submitted. The URL that processes the form submission.
+method:
+  type: select
+  comment: How the form-data is sent. Use POST unless the endpoint is a search or filter that should be linkable.
+  options:
+    values:
+      - id: post
+        name: POST
+      - id: get
+        name: GET
+honeypotName:
+  type: text
+  comment: Name of a decoy field, hidden from visitors, that spam bots tend to fill in. Only works if your form endpoint rejects submissions that carry it. Leave blank for none.
+successMessage:
+  type: text
+  comment: Message shown when the visitor is sent back to this page with `?success` in the URL after submitting. Set your form endpoint's redirect to that URL. Leave blank for none.
+formBlocks:
+  type: array
+  comment: The form blocks to render inside the form.
+  options:
+    structures: _structures.formBlocks
+
+# Inlined rather than shared: a second `_inputs_from_glob` entry on a structure
+# value never reached the editor, leaving this field as free text.
+spaceBefore:
+  comment: Space above this block. Default follows the block's type; a Spacer replaces the gap entirely. Has no effect on the first block in a container.
+  type: select
+  options:
+    values:
+      - id: default
+        name: Default
+      - id: none
+        name: None
+      - id: tight
+        name: Tight
+      - id: loose
+        name: Loose
