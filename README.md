@@ -2,7 +2,8 @@
 
 Stratus is a complete documentation site built with Astro, designed for visual editing in
 [CloudCannon](https://cloudcannon.com/). You clone it, you own it. Every component is your
-source code to modify, extend, or delete.
+source code to modify, extend, or delete. Browse through a
+[live demo](https://glamorous-boar.cloudvent.net/).
 
 [![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/cloudcannon/stratus-astro-documentation-template)
 
