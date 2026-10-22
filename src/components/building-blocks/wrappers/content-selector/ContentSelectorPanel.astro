@@ -54,7 +54,7 @@ const subtextDataAttributes = effectiveSubtextProp
     type="radio"
     name={groupName}
     id={tabId}
-    class="content-selector-input"
+    class="content-selector-input visually-hidden"
     checked={checked}
     autocomplete="off"
   />
@@ -142,8 +142,11 @@ const subtextDataAttributes = effectiveSubtextProp
       }
     }
 
-    .content-selector-input {
-      display: none;
+    /* The radio is visually hidden, not `display: none`: it is the focusable
+       control that arrow keys move between, so its ring is drawn on the tab. */
+    .content-selector-input:focus-visible + .content-selector-tab {
+      outline: var(--focus-ring-width) var(--focus-ring-style) var(--color-focus-ring);
+      outline-offset: -2px;
     }
 
     .content-selector-tab {

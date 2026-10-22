@@ -10,13 +10,13 @@
     },
     {
       "name": "GitHub",
-      "path": "https://github.com/AlyshaNolan/temp-docs-template"
+      "path": "https://github.com/CloudCannon/stratus-astro-documentation-template"
     }
   ],
   "socials": [
     {
       "icon": "social/github",
-      "link": "https://github.com/AlyshaNolan/temp-docs-template"
+      "link": "https://github.com/CloudCannon/stratus-astro-documentation-template"
     }
   ],
   "footerText": "Stratus \u2014 an Astro documentation template. MIT licensed."

@@ -20,7 +20,7 @@ const STARTER_LOGOS = [
   "/src/assets/images/logo/logo-light.svg",
   "/src/assets/images/logo/logo-dark.svg",
 ];
-const STARTER_REPO = "AlyshaNolan/temp-docs-template";
+const STARTER_REPO = "CloudCannon/stratus-astro-documentation-template";
 
 function read(relativePath) {
   try {
