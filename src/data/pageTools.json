@@ -8,7 +8,8 @@
   "feedback": {
     "enabled": true,
     "prompt": "Was this page helpful?",
-    "action": "/",
+    "action": "",
+    "inboxKey": "stratus-form",
     "successMessage": "Thanks — that's logged against this page."
   }
 }

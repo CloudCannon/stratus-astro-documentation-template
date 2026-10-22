@@ -1,8 +1,10 @@
 ---
 // A real form so it works without JS; a custom `feedback.action` endpoint receives `page` + `vote`.
+// An empty `action` posts back to `page`, so a no-JS vote on CloudCannon Forms returns the reader there.
 const {
   prompt = "Was this page helpful?",
-  action = "/",
+  action,
+  inboxKey,
   successMessage = "Thanks — that's logged against this page.",
   page = "",
   class: className,
@@ -16,7 +18,7 @@ const {
 >
   <form
     method="post"
-    action={action}
+    action={action || page}
     class="page-feedback-form"
   >
     <input
@@ -24,6 +26,15 @@ const {
       name="form-name"
       value="page-feedback"
     />
+    {
+      inboxKey && (
+        <input
+          type="hidden"
+          name="inbox_key"
+          value={inboxKey}
+        />
+      )
+    }
     <input
       type="hidden"
       name="page"

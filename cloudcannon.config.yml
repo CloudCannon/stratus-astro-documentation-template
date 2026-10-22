@@ -666,6 +666,14 @@ file_config:
         type: object
         comment: The "Was this page helpful?" block.
         cascade: true
+      action:
+        type: text
+        comment: Where votes are posted. A page
+          on this site, such as a thank-you page (or blank for same page), also works with CloudCannon Forms. For
+          another service, enter its endpoint URL.
+      inboxKey:
+        type: text
+        comment: The CloudCannon Inbox that receives votes. See [Inbox keys](https://cloudcannon.com/documentation/developer-articles/connecting-your-site-to-an-inbox/).
   - glob: src/data/announcementBar.json
     _inputs:
       enabled:

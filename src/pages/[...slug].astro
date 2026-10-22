@@ -169,6 +169,7 @@ const showFeedback = Boolean(doc?.data.showFeedback && pageTools.feedback?.enabl
           <PageFeedback
             prompt={pageTools.feedback.prompt}
             action={pageTools.feedback.action}
+            inboxKey={pageTools.feedback.inboxKey}
             successMessage={pageTools.feedback.successMessage}
             page={href}
             data-toggle-hidden={showFeedback ? undefined : ""}
