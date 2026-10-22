@@ -4,7 +4,7 @@ Stratus is a complete documentation site built with Astro, designed for visual e
 [CloudCannon](https://cloudcannon.com/). You clone it, you own it. Every component is your
 source code to modify, extend, or delete.
 
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](#)
+[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/cloudcannon/stratus-astro-documentation-template)
 
 You write Markdown; the template handles the grouped sidebar, client-side search, the
 on-this-page rail, code tabs, diagrams, a print layout, and a 404 that searches. It ships dark
