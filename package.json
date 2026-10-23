@@ -66,9 +66,9 @@
     "@pagefind/component-ui": "^1.5.2",
     "astro": "^7.2.0",
     "glob": "^13.0.6",
-    "js-yaml": "^5.2.3",
-    "markdown-it": "^15.0.0",
-    "mermaid": "^11.17.2",
+    "js-yaml": "^5.4.1",
+    "markdown-it": "^15.0.3",
+    "mermaid": "^12.2.0",
     "sharp": "^0.35.3",
     "shiki": "^4.4.3",
     "zod": "^4.4.3"
@@ -96,7 +96,7 @@
     "stylelint-config-standard": "^40.0.0",
     "stylelint-order": "^8.1.1",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.10",
+    "vitest": "^4.1.12",
     "yaml-eslint-parser": "^2.1.0"
   },
   "engines": {
